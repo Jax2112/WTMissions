@@ -1,0 +1,250 @@
+selected_tag:t=""
+bin_dump_file:t=""
+
+mission_settings{
+  player{
+    army:i=1
+    wing:t="armada_01"
+  }
+
+  player_teamB{
+    army:i=2
+  }
+
+  mission{
+    type:t="event"
+    level:t="levels/hangar_field.bin"
+    environment:t="Day"
+    weather:t="good"
+    locName:t="Battle Coastal"
+    locDesc:t="Coastal Battle"
+    gt_mp_tickets:b=yes
+    gt_mp_capture:b=no
+    gt_mp_solo:b=yes
+    gt_cooperative:b=no
+    gt_reload_explosives:b=no
+    gt_ffa:b=no
+  }
+
+  atmosphere{
+    pressure:r=760
+    temperature:r=15
+  }
+}
+
+imports{}
+triggers{
+  isCategory:b=yes
+  is_enabled:b=yes
+
+  "Starting Spawn"{
+    is_enabled:b=yes
+    comments:t=""
+
+    props{
+      actionsType:t="PERFORM_ONE_BY_ONE"
+      conditionsType:t="ALL"
+      enableAfterComplete:b=no
+    }
+
+    events{
+      initMission{}
+    }
+
+    conditions{}
+    actions{
+      missionMarkAsRespawnPoint{
+        loc_name:t="Axis Spawn"
+        radius:r=-1
+        target:t="Team 1 Spawn"
+        team:t="A"
+        showOnMap:b=yes
+
+        tags{
+          air:b=yes
+          type_bomber:b=yes
+          type_fighter:b=yes
+          type_assault:b=yes
+          type_interceptor:b=yes
+          type_aa_fighter:b=yes
+          type_light_bomber:b=yes
+          type_frontline_bomber:b=yes
+          type_longrange_bomber:b=yes
+          type_hydroplane:b=yes
+          type_strike_ucav:b=yes
+          carrier_take_off:b=yes
+          airfield_take_off:b=yes
+          airfield_take_off_air_rb:b=yes
+          vtol_jet:b=yes
+          none_can_spawn:b=yes
+          human:b=yes
+          helicopter:b=yes
+          type_attack_helicopter:b=yes
+          type_utility_helicopter:b=yes
+          tank:b=no
+          type_heavy_tank:b=no
+          type_medium_tank:b=no
+          type_light_tank:b=no
+          type_tank_destroyer:b=no
+          type_spaa:b=no
+          artillery:b=no
+          aaa:b=no
+          ship:b=no
+          boat:b=no
+          type_frigate:b=no
+          type_destroyer:b=no
+          type_light_cruiser:b=no
+          type_heavy_cruiser:b=no
+          type_battlecruiser:b=no
+          type_battleship:b=no
+          type_submarine:b=no
+          type_human:b=no
+          walker:b=no
+          country_japan:b=yes
+          country_germany:b=yes
+          country_usa:b=yes
+          country_britain:b=yes
+          country_australia:b=yes
+          country_ussr:b=yes
+        }
+      }
+    }
+
+    else_actions{}
+  }
+
+  "Starting Spawn Allies"{
+    is_enabled:b=yes
+    comments:t=""
+
+    props{
+      actionsType:t="PERFORM_ONE_BY_ONE"
+      conditionsType:t="ALL"
+      enableAfterComplete:b=no
+    }
+
+    events{
+      initMission{}
+    }
+
+    conditions{}
+    actions{
+      missionMarkAsRespawnPoint{
+        loc_name:t="Allies Spawn"
+        radius:r=-1
+        target:t="Team 2 Spawn"
+        team:t="B"
+
+        tags{
+          air:b=yes
+          type_bomber:b=yes
+          type_assault:b=yes
+          tank:b=no
+          type_heavy_tank:b=no
+          type_medium_tank:b=no
+          type_tank_destroyer:b=no
+          type_spaa:b=no
+          artillery:b=no
+          aaa:b=no
+          ship:b=no
+        }
+      }
+    }
+
+    else_actions{}
+  }
+}
+
+mission_objectives{
+  isCategory:b=yes
+  is_enabled:b=yes
+}
+
+variables{}
+dialogs{}
+airfields{}
+effects{}
+units{
+  armada{
+    name:t="armada_01"
+    tm:m=[[1, 0, 0] [0, 1, 0] [0, 0, 1] [-3384.48, 373.556, -603.01]]
+    unit_class:t="su_33"
+    objLayer:i=1
+    closed_waypoints:b=no
+    isShipSpline:b=no
+    shipTurnRadius:r=100
+    weapons:t=""
+    bullets0:t=""
+    bullets1:t=""
+    bullets2:t=""
+    bullets3:t=""
+    bulletsCount0:i=0
+    bulletsCount1:i=0
+    bulletsCount2:i=0
+    bulletsCount3:i=0
+    crewSkillK:r=0
+    applyAllMods:b=no
+
+    props{
+      army:i=1
+      count:i=1
+      free_distance:r=70
+      floating_distance:r=50
+      minimum_distance_to_earth:r=20
+      altLimit:r=6000
+      attack_type:t="fire_at_will"
+      skill:i=4
+
+      plane{
+        wing_formation:t="Diamond"
+        row_distances:r=3
+        col_distances:r=3
+        super_formation:t="Diamond"
+        super_row_distances:r=1.5
+        super_col_distances:r=1.5
+        ai_skill:t="NORMAL"
+        task:t="FLY_WAYPOINT"
+      }
+    }
+
+    way{}
+  }
+}
+
+areas{
+  "Team 1 Spawn"{
+    type:t="Sphere"
+    tm:m=[[60, 0, 0] [0, 60, 0] [0, 0, 60] [-3490.75, 314.566, 81.8926]]
+    objLayer:i=0
+
+    props{}
+  }
+
+  "Team 2 Spawn"{
+    type:t="Sphere"
+    tm:m=[[-12.9864, 0, 58.5778] [0, 60, 0] [-58.5778, 0, -12.9864] [3248.34, 1000, 1345.53]]
+    objLayer:i=0
+
+    props{}
+  }
+}
+
+objLayers{
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+}
+
+wayPoints{}
