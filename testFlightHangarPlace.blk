@@ -225,6 +225,8 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
       aiEnabled:b=no
 
       plane{
@@ -271,6 +273,8 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=no
+      aiEnabled:b=yes
 
       plane{
         wing_formation:t="Diamond"
@@ -991,6 +995,7 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
       isDelayed:b=yes
       aiEnabled:b=no
 
@@ -1038,6 +1043,8 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
       aiEnabled:b=no
 
       plane{
@@ -1084,6 +1091,8 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
       aiEnabled:b=no
 
       plane{
@@ -1130,6 +1139,8 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
       aiEnabled:b=no
 
       plane{
@@ -1176,6 +1187,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1221,6 +1235,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1266,6 +1283,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1311,6 +1331,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1356,6 +1379,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1401,6 +1427,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1446,6 +1475,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1491,6 +1523,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1536,6 +1571,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1581,6 +1619,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
@@ -1626,6 +1667,9 @@ units{
       altLimit:r=6000
       attack_type:t="fire_at_will"
       skill:i=4
+      player:b=yes
+      isDelayed:b=yes
+      aiEnabled:b=no
 
       plane{
         wing_formation:t="Diamond"
