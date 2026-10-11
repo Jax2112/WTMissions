@@ -72,6 +72,7 @@ triggers{
         loc_name:t="Warsaw Pact Airfield"
         radius:r=-1
         target:t="Airfield Start"
+        team:t="A"
         isAirfield:b=yes
 
         tags{
