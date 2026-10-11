@@ -41,40 +41,6 @@ triggers{
   isCategory:b=yes
   is_enabled:b=yes
 
-  EastGERSpawn{
-    is_enabled:b=yes
-    comments:t=""
-
-    props{
-      actionsType:t="PERFORM_ONE_BY_ONE"
-      conditionsType:t="ALL"
-      enableAfterComplete:b=no
-    }
-
-    events{
-      initMission{}
-    }
-
-    conditions{}
-    actions{
-      missionMarkAsRespawnPoint{
-        loc_name:t="Warsaw Pact Spawn"
-        radius:r=-1
-        target:t="area_01"
-        target:t="area_02"
-        target:t="area_03"
-        target:t="area_04"
-        team:t="A"
-
-        tags{
-          air:b=yes
-        }
-      }
-    }
-
-    else_actions{}
-  }
-
   Airfields{
     is_enabled:b=yes
     comments:t=""
@@ -103,15 +69,10 @@ triggers{
       }
 
       missionMarkAsRespawnPoint{
-        loc_name:t="East German Spawn"
+        loc_name:t="Warsaw Pact Airfield"
         radius:r=-1
         target:t="Airfield Start"
-        team:t="A"
         isAirfield:b=yes
-
-        tags{
-          air:b=yes
-        }
       }
     }
 
