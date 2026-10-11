@@ -73,6 +73,10 @@ triggers{
         radius:r=-1
         target:t="Airfield Start"
         isAirfield:b=yes
+
+        tags{
+          air:b=yes
+        }
       }
     }
 
