@@ -1,0 +1,290 @@
+selected_tag:t=""
+bin_dump_file:t=""
+
+mission_settings{
+  player{
+    army:i=1
+    wing:t="armada_01"
+    wing:t="armada_02"
+    wing:t="armada_03"
+  }
+
+  player_teamB{
+    army:i=2
+  }
+
+  mission{
+    type:t="event"
+    level:t="levels/berlin.bin"
+    environment:t="Day"
+    weather:t="good"
+  }
+}
+
+imports{}
+triggers{
+  isCategory:b=yes
+  is_enabled:b=yes
+
+  Airfields{
+    is_enabled:b=yes
+    comments:t=""
+
+    props{
+      actionsType:t="PERFORM_ONE_BY_ONE"
+      conditionsType:t="ALL"
+      enableAfterComplete:b=no
+    }
+
+    events{
+      initMission{}
+    }
+
+    conditions{}
+    actions{
+      addAirfield{
+        runwayStart:t="Airfield Start WP"
+        runwayEnd:t="Airfield End WP"
+        runwayWidth:r=10
+        army:i=1
+        spawnPoint:t="area_01"
+        spawnPoint:t="area_02"
+        spawnPoint:t="area_03"
+      }
+
+      missionMarkAsRespawnPoint{
+        loc_name:t="Warsaw Pact Spawn"
+        radius:r=-1
+        target:t="Airfield Start WP"
+        team:t="A"
+        isAirfield:b=yes
+
+        tags{
+          air:b=yes
+        }
+      }
+    }
+
+    else_actions{}
+  }
+}
+
+mission_objectives{
+  isCategory:b=yes
+  is_enabled:b=yes
+}
+
+variables{}
+dialogs{}
+airfields{}
+effects{}
+units{
+  objectGroups{
+    name:t="Airfield WP"
+    tm:m=[[-0.00428143, 0, 0.999991] [0, 1, 0] [-0.999991, 0, -0.00428143] [25300, 60, -14405]]
+    unit_class:t="dynaf_korea_2k"
+    objLayer:i=2
+
+    props{
+      army:i=2
+      active:b=yes
+    }
+  }
+
+  armada{
+    name:t="armada_01"
+    tm:m=[[1, 0, 0] [0, 1, 0] [0, 0, 1] [27111.6, 448.607, -14422.3]]
+    unit_class:t="a-20g"
+    objLayer:i=1
+    closed_waypoints:b=no
+    isShipSpline:b=no
+    shipTurnRadius:r=100
+    weapons:t=""
+    bullets0:t=""
+    bullets1:t=""
+    bullets2:t=""
+    bullets3:t=""
+    bulletsCount0:i=0
+    bulletsCount1:i=0
+    bulletsCount2:i=0
+    bulletsCount3:i=0
+    crewSkillK:r=0
+    applyAllMods:b=no
+
+    props{
+      army:i=2
+      count:i=1
+      free_distance:r=70
+      floating_distance:r=50
+      minimum_distance_to_earth:r=20
+      altLimit:r=6000
+      attack_type:t="fire_at_will"
+      skill:i=4
+
+      plane{
+        wing_formation:t="Diamond"
+        row_distances:r=3
+        col_distances:r=3
+        super_formation:t="Diamond"
+        super_row_distances:r=1.5
+        super_col_distances:r=1.5
+        ai_skill:t="NORMAL"
+        task:t="FLY_WAYPOINT"
+      }
+    }
+
+    way{}
+  }
+
+  armada{
+    name:t="armada_02"
+    tm:m=[[1, 0, 0] [0, 1, 0] [0, 0, 1] [27111.6, 448.607, -14422.3]]
+    unit_class:t="a-20g"
+    objLayer:i=1
+    closed_waypoints:b=no
+    isShipSpline:b=no
+    shipTurnRadius:r=100
+    weapons:t=""
+    bullets0:t=""
+    bullets1:t=""
+    bullets2:t=""
+    bullets3:t=""
+    bulletsCount0:i=0
+    bulletsCount1:i=0
+    bulletsCount2:i=0
+    bulletsCount3:i=0
+    crewSkillK:r=0
+    applyAllMods:b=no
+
+    props{
+      army:i=2
+      count:i=1
+      free_distance:r=70
+      floating_distance:r=50
+      minimum_distance_to_earth:r=20
+      altLimit:r=6000
+      attack_type:t="fire_at_will"
+      skill:i=4
+
+      plane{
+        wing_formation:t="Diamond"
+        row_distances:r=3
+        col_distances:r=3
+        super_formation:t="Diamond"
+        super_row_distances:r=1.5
+        super_col_distances:r=1.5
+        ai_skill:t="NORMAL"
+        task:t="FLY_WAYPOINT"
+      }
+    }
+
+    way{}
+  }
+
+  armada{
+    name:t="armada_03"
+    tm:m=[[1, 0, 0] [0, 1, 0] [0, 0, 1] [27111.6, 448.607, -14422.3]]
+    unit_class:t="a-20g"
+    objLayer:i=1
+    closed_waypoints:b=no
+    isShipSpline:b=no
+    shipTurnRadius:r=100
+    weapons:t=""
+    bullets0:t=""
+    bullets1:t=""
+    bullets2:t=""
+    bullets3:t=""
+    bulletsCount0:i=0
+    bulletsCount1:i=0
+    bulletsCount2:i=0
+    bulletsCount3:i=0
+    crewSkillK:r=0
+    applyAllMods:b=no
+
+    props{
+      army:i=2
+      count:i=1
+      free_distance:r=70
+      floating_distance:r=50
+      minimum_distance_to_earth:r=20
+      altLimit:r=6000
+      attack_type:t="fire_at_will"
+      skill:i=4
+
+      plane{
+        wing_formation:t="Diamond"
+        row_distances:r=3
+        col_distances:r=3
+        super_formation:t="Diamond"
+        super_row_distances:r=1.5
+        super_col_distances:r=1.5
+        ai_skill:t="NORMAL"
+        task:t="FLY_WAYPOINT"
+      }
+    }
+
+    way{}
+  }
+}
+
+areas{
+  "Airfield Start WP"{
+    type:t="Point"
+    tm:m=[[1, 0, 0] [0, 1, 0] [0, 0, 1] [25300.2, 70, -15329.3]]
+    objLayer:i=0
+
+    props{}
+  }
+
+  "Airfield End WP"{
+    type:t="Point"
+    tm:m=[[-1, 0, -1.60187e-07] [0, 1, 0] [1.60187e-07, 0, -1] [25300.2, 70, -13300]]
+    objLayer:i=0
+
+    props{}
+  }
+
+  area_01{
+    type:t="Sphere"
+    tm:m=[[44.587, 0, 0] [0, 44.587, 0] [0, 0, 44.587] [25589.8, 64.557, -13719.6]]
+    objLayer:i=0
+
+    props{}
+  }
+
+  area_02{
+    type:t="Sphere"
+    tm:m=[[44.587, 0, 0] [0, 44.587, 0] [0, 0, 44.587] [25589.8, 64.557, -13771.4]]
+    objLayer:i=0
+
+    props{}
+  }
+
+  area_03{
+    type:t="Sphere"
+    tm:m=[[44.587, 0, 0] [0, 44.587, 0] [0, 0, 44.587] [25589.8, 64.557, -13826.6]]
+    objLayer:i=0
+
+    props{}
+  }
+}
+
+objLayers{
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+
+  layer{
+    enabled:b=yes
+  }
+}
+
+wayPoints{}
